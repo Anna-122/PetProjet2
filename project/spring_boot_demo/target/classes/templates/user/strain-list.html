@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Strains</title>
+</head>
+<body>
+<div th:switch="${strains}">
+    <h2 th:case="null">No strains found!</h2>
+    <div th:case="*">
+        <h2>Strains</h2>
+        <table>
+            <thead>
+            <tr>
+                <th>Strain id</th>
+                <th>Strain</th>
+                <th>Culture name</th>
+                <th>Date time registration</th>
+                <th>Country id</th>
+                <th>City id</th>
+                <th>Organization id</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr th:each="strain : ${strains}">
+                <td th:text="${strain.strainId}"></td>
+                <td th:text="${strain.strain}"></td>
+                <td th:text="${strain.cultureName}"></td>
+                <td th:text="${strain.dateTimeRegistration}"></td>
+                <td th:text="${strain.countryId}"></td>
+                <td th:text="${strain.cityId}"></td>
+                <td th:text="${strain.organizationId}"></td>
+
+                <td><a th:href="@{strain-update/{id}(id=${strain.strainId})}">Edit</a></td>
+                <td><a th:href="@{strain-delete/{id}(id=${strain.strainId})}">Delete</a></td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+    <p><a href="/user/strain-create">Create strain</a></p>
+</div>
+</body>
+</html>
+
+
+
+
+
+
+
+
+<!--<!DOCTYPE html>-->
+<!--<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">-->
+<!--<head>-->
+<!--    <meta charset="UTF-8">-->
+<!--    <title>Users</title>-->
+<!--</head>-->
+<!--<body>-->
+<!--<div th:switch="${users}">-->
+<!--    <h2 th:case="null">No users found!</h2>-->
+<!--    <div th:case="*">-->
+<!--        <h2>Users</h2>-->
+<!--        <table>-->
+<!--            <thead>-->
+<!--            <tr>-->
+<!--                <th>Id</th>-->
+<!--                <th>First name</th>-->
+<!--                <th>Last name</th>-->
+<!--            </tr>-->
+<!--            </thead>-->
+<!--            <tbody>-->
+<!--            <tr th:each="user : ${users}">-->
+<!--                <td th:text="${user.id}"></td>-->
+<!--                <td th:text="${user.firstName}"></td>-->
+<!--                <td th:text="${user.lastName}"></td>-->
+<!--                <td><a th:href="@{user-update/{id}(id=${user.id})}">Edit</a></td>-->
+<!--                <td><a th:href="@{user-delete/{id}(id=${user.id})}">Delete</a></td>-->
+<!--            </tr>-->
+<!--            </tbody>-->
+<!--        </table>-->
+<!--    </div>-->
+<!--    <p><a href="/user-create">Create user</a></p>-->
+<!--</div>-->
+<!--</body>-->
+<!--</html>-->

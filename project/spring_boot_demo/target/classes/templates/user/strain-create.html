@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Create strain</title>
+</head>
+<body>
+<form action="#" th:action="@{/user/strain-create}" th:object="${strain}" method="post">
+    <label for="strain">Strain</label>
+    <input type="text" th:field="*{strain}" id="strain" placeholder="Strain">
+
+    <label for="cultureName">Culture name</label>
+    <input type="text" th:field="*{cultureName}" id="cultureName" placeholder="Culture Name">
+
+    <label for="dateTimeRegistration">Date time registration</label>
+    <input type="date" th:field="*{dateTimeRegistration}" id="dateTimeRegistration" placeholder="Date Time Registration">
+
+    <label for="countryId">Country id</label>
+    <input type="number" th:field="*{countryId}" id="countryId" placeholder="Country Id">
+
+    <label for="cityId">City id</label>
+    <input type="number" th:field="*{cityId}" id="cityId" placeholder="City Id">
+
+    <label for="organizationId">organization id</label>
+    <input type="number" th:field="*{organizationId}" id="organizationId" placeholder="Organization Id">
+
+
+    <input type="submit" value="Create Strain">
+</form>
+</body>
+</html>
+
+
+
+<!--<!DOCTYPE html>-->
+<!--<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">-->
+<!--<head>-->
+<!--    <meta charset="UTF-8">-->
+<!--    <title>Create strain</title>-->
+<!--</head>-->
+<!--<body>-->
+<!--<form action="#" th:action="@{/strain-create}" th:object="${strain}" method="post">-->
+<!--    <label for="firstName">First name</label>-->
+<!--    <input type="text" th:field="*{firstName}" id="firstName" placeholder="First Name">-->
+<!--    <label for="lastName">Last name</label>-->
+<!--    <input type="text" th:field="*{lastName}" id="lastName" placeholder="Last Name">-->
+<!--    <input type="submit" value="Create Strain">-->
+<!--</form>-->
+<!--</body>-->
+<!--</html>-->

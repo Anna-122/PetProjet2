@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<meta charset="UTF-8">
+<title>Create strain</title>
+</head>
+<body>
+<form action="#" th:action="@{/user/strain-update}" th:object="${strain}" method="post">
+    <label for="strainId">ID</label>
+    <input readonly type="number" th:field="*{strainId}" id="strainId" placeholder="ID">
+
+    <br/>
+    <label for="strain">Strain</label>
+    <input type="text" th:field="*{strain}" id="strain" placeholder="Strain">
+
+    <br/>
+    <label for="cultureName">Culture name</label>
+    <input type="text" th:field="*{cultureName}" id="cultureName" placeholder="Culture Name">
+
+    <br/>
+    <label for="dateTimeRegistration">Date time registration</label>
+    <input type="date" th:field="*{dateTimeRegistration}" id="dateTimeRegistration" placeholder="Date Time Registration">
+
+    <br/>
+    <label for="countryId">Country id</label>
+    <input type="number" th:field="*{countryId}" id="countryId" placeholder="Country Id">
+
+    <br/>
+    <label for="cityId">City id</label>
+    <input type="number" th:field="*{cityId}" id="cityId" placeholder="City Id">
+
+    <br/>
+    <label for="organizationId">Organization id</label>
+    <input type="number" th:field="*{organizationId}" id="organizationId" placeholder="Organization Id">
+
+
+    <br/>
+    <input type="submit" value="Update Strain">
+</form>
+</body>
+</html>
+
+

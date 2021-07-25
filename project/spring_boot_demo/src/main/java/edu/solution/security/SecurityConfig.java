@@ -1,5 +1,4 @@
-package edu.security.security;
-
+package edu.solution.security;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
@@ -14,9 +13,8 @@ import javax.sql.DataSource;
 
 @EnableWebSecurity(debug = true)
 public class SecurityConfig extends WebSecurityConfigurerAdapter {
-  @Autowired
-  private DataSource dataSource;
-  // private DataSource getDataSource;
+    @Autowired
+    private DataSource dataSource;
 
     @Bean
     public PasswordEncoder passwordEncoder() {
@@ -29,10 +27,10 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
         auth.jdbcAuthentication()
                 .dataSource(dataSource)
                 .usersByUsernameQuery(
-                        "select login, password, 'true' from my_user " +
+                        "select login, password, 'true' from users " +
                                 "where login=?")
                 .authoritiesByUsernameQuery(
-                        "select login, authority from my_user " +
+                        "select login, authority from users " +
                                 "where login=?");
     }
 
@@ -46,3 +44,4 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 
     }
 }
+
