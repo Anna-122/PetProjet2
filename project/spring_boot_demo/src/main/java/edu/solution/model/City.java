@@ -19,7 +19,7 @@ public class City {
     private Long cityId;
 
     @Column(name = "country_id")
-    private String countryId;
+    private Long countryId;
 
     @Column(name = "city")
     private String city;

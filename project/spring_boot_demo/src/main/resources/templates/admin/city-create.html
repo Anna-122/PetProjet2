@@ -6,13 +6,11 @@
 </head>
 <body>
 <form action="#" th:action="@{/admin/city-create}" th:object="${city}" method="post">
+    <label for="countryId">Country Id</label>
+    <input type="text" th:field="*{countryId}" id="countryId" placeholder="Country Id">
 
-    <label for="country_id">Country Id</label>
-    <input type="number" th:field="*{country_id}" id="country_id" placeholder="Country Id">
-
-        <label for="city">City</label>
-        <input type="text" th:field="*{city}" id="city" placeholder="City">
-
+    <label for="city">City</label>
+    <input type="text" th:field="*{city}" id="city" placeholder="City">
 
     <input type="submit" value="Create City">
 </form>

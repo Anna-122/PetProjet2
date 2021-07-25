@@ -39,7 +39,7 @@ public class CountryController {
     @PostMapping("/admin/country-create")
     public String createCountry(Country country){
         countryService.saveCountry(country);
-        return "redirect:/countries";
+        return "redirect:/admin/countries";
     }
 
 

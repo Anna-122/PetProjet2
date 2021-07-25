@@ -24,18 +24,18 @@ public class AdminController {
     public String findAll(Model model){
         List<User> users = userService.findAll();
         model.addAttribute("users", users);
-        return "admin/user-list";
+        return "/admin/user-list";
     }
 
     @GetMapping("/admin/user-create")
     public String createUserForm(User user){
-        return "admin/user-create";
+        return "/admin/user-create";
     }
 
     @PostMapping("/admin/user-create")
     public String createUser(User user){
         userService.saveUser(user);
-        return "redirect:admin/users";
+        return "redirect:/admin/users";
     }
 
     @GetMapping("/admin/user-delete/{id}")
@@ -48,7 +48,7 @@ public class AdminController {
     public String updateUserForm(@PathVariable("id") Long id, Model model){
         User user = userService.findById(id);
         model.addAttribute("user", user);
-        return "admin/user-update";
+        return "/admin/user-update";
     }
 
     @PostMapping("/admin/user-update")
@@ -59,7 +59,7 @@ public class AdminController {
 
     @GetMapping("/admin/admin")
     public String admin(){
-        return "admin/admin";
+        return "/admin/admin";
     }
 }
 

@@ -28,7 +28,7 @@ public class CityController {
     public String findAll(Model model){
         List<City> cities = cityService.findAll();
         model.addAttribute("cities", cities);
-        return "/admin/city-list.html";
+        return "/admin/city-list";
     }
 
     @GetMapping("/admin/city-create")
@@ -39,7 +39,7 @@ public class CityController {
     @PostMapping("/admin/city-create")
     public String createCity(City city){
         cityService.saveCity(city);
-        return "redirect:/cities";
+        return "redirect:/admin/cities";
     }
 
     @GetMapping("/admin/city-delete/{id}")

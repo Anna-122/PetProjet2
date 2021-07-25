@@ -4,7 +4,7 @@
 <title>Create country</title>
 </head>
 <body>
-<form action="#" th:action="@{/country-update}" th:object="${country}" method="post">
+<form action="#" th:action="@{/admin/country-update}" th:object="${country}" method="post">
     <label for="countryId">ID</label>
     <input readonly type="number" th:field="*{countryId}" id="countryId" placeholder="Country Id">
     <br/>
