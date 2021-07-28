@@ -17,6 +17,7 @@
         <datasource-mapping>
           <factory-entry name="entityManagerFactory" value="192db302-cedf-42dd-a5a8-6810ee5b4007" />
           <factory-entry name="springbootdemo" value="192db302-cedf-42dd-a5a8-6810ee5b4007" />
+          <factory-entry name="strain_museum" />
         </datasource-mapping>
         <naming-strategy-map />
       </configuration>
@@ -139,6 +140,5 @@
     <orderEntry type="library" name="Maven: org.springframework.security:spring-security-config:5.2.1.RELEASE" level="project" />
     <orderEntry type="library" name="Maven: org.springframework.security:spring-security-core:5.2.1.RELEASE" level="project" />
     <orderEntry type="library" name="Maven: org.springframework.security:spring-security-web:5.2.1.RELEASE" level="project" />
-    <orderEntry type="library" name="Maven: org.thymeleaf:thymeleaf:Release" level="project" />
   </component>
 </module>

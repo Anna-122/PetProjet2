@@ -7,9 +7,11 @@
 <form action="#" th:action="@{/admin/country-update}" th:object="${country}" method="post">
     <label for="countryId">ID</label>
     <input readonly type="number" th:field="*{countryId}" id="countryId" placeholder="Country Id">
+
     <br/>
     <label for="country">Country</label>
     <input type="text" th:field="*{country}" id="country" placeholder="Country">
+
 
     <br/>
     <input type="submit" value="Update Country">
