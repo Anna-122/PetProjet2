@@ -1,6 +1,6 @@
 package net.proselyte.springbootdemo.controller;
-import net.proselyte.springbootdemo.model.User;
 
+import net.proselyte.springbootdemo.model.User;
 import net.proselyte.springbootdemo.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -37,6 +37,7 @@ public class AdminController {
         userService.saveUser(user);
         return "redirect:/admin/users";
     }
+
 
     @GetMapping("/admin/user-delete/{id}")
     public String deleteUser(@PathVariable("id") Long id){

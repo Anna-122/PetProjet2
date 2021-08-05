@@ -34,17 +34,24 @@ public class CountryController {
     public String createCountryForm(Country country){
         return "/admin/country-create";
     }
+//
+//    @PostMapping("/admin/country-create")
+//    public String createCountry(Country country){
+//        countryService.saveCountry(country);
+//        return "redirect:/admin/countries";
+//    }
+//
 
     @PostMapping("/admin/country-create")
-    public String createCountry(Country country){
-        countryService.saveCountry(country);
+    public String createCountry(String country){
+        Country countryEntity = new Country(null,country);
+        countryService.saveCountry( countryEntity);
         return "redirect:/admin/countries";
     }
 
 
-
-    @GetMapping("/admin/country-delete/{id}")  //countryId
-    public String deleteCountry(@PathVariable("id") Long id){ //countryId
+    @GetMapping("/admin/country-delete/{id}")
+    public String deleteCountry(@PathVariable("id") Long id){
         countryService.deleteById(id);
         return "redirect:/admin/countries";
     }
@@ -62,4 +69,5 @@ public class CountryController {
         countryService.saveCountry(country);
         return "redirect:/admin/countries";
     }
+
 }

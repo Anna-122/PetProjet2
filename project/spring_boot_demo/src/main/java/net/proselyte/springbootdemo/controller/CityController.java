@@ -42,6 +42,13 @@ public class CityController {
         return "redirect:/admin/cities";
     }
 
+//@PostMapping("/admin/city-create")
+//public String createCity(String city, Long countryId){
+//        City cityEntity = new City(null,countryId,city);
+//    cityService.saveCity(cityEntity);
+//    return "redirect:/admin/cities";
+//}
+
     @GetMapping("/admin/city-delete/{id}")
     public String deleteCity(@PathVariable("id") Long id){
         cityService.deleteById(id);

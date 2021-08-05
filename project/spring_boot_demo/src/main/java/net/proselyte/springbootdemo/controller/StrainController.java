@@ -9,6 +9,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 
+import java.util.Date;
 import java.util.List;
 
 @Controller
@@ -44,6 +45,14 @@ public class StrainController {
         strainService.saveStrain(strain);
         return "redirect:/user/strains";
     }
+
+//    @PostMapping("/user/strain-create")
+//
+//    public String createStrain(String strain, String cultureName, Date dateTimeRegistration, Long countryId, Long cityId, Long organizationId ){
+//        Strain strainEntity = new Strain(null,strain,cultureName,dateTimeRegistration,countryId,cityId,organizationId);
+//        strainService.saveStrain(strainEntity);
+//        return "redirect:/user/strains";
+//    }
 
     @GetMapping("/user/strain-delete/{id}")
     public String deleteUser(@PathVariable("id") Long id){
